@@ -410,6 +410,8 @@ If the given port is already in use, Astro will automatically try the next avail
 Set custom HTTP response headers to be sent in `astro dev` and `astro preview`.
 
 
+## Image options
+
 ## Markdown Options
 
 ### markdown.drafts
@@ -612,4 +614,25 @@ View the full `vite` configuration object documentation on [vitejs.dev](https://
 To help some users migrate between versions of Astro, we occasionally introduce `legacy` flags.
 These flags allow you to opt in to some deprecated or otherwise outdated behavior of Astro
 in the latest version, so that you can continue to upgrade and take advantage of new Astro releases.
+
+### experimental.assets
+
+<p>
+
+**Type:** `boolean`<br />
+**Default:** `false`<br />
+<Since v="2.1.0" />
+</p>
+
+Enable experimental support for optimizing and resizing images. With this enabled, a new `astro:assets` module will be exposed.
+
+To enable this feature, set `experimental.assets` to `true` in your Astro config:
+
+```js
+{
+	experimental: {
+		assets: true,
+	},
+}
+
 
